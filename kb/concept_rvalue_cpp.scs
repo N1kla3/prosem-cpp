@@ -1,0 +1,37 @@
+sc_node_not_relation -> concept_rvalue_cpp;;
+sc_node_norole_relation -> nrel_get_addres;;
+sc_node_not_relation -> concept_value;;
+
+concept_rvalue_cpp
+=> nrel_main_idtf:
+		[c++ rvalue]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ rvalue]
+	    (* <- lang_ru;; *);
+
+<= nrel_inclusion : concept_expression;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_rvalue_cpp;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[rvalue - выражение являющееся значением.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (rvalue)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_expression;
+		concept_value	
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_rvalue_cpp;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[К rvalue не применима операция взятия аддреса(&)](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(rvalue)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_rvalue;
+		nrel_get_addres
+	};;
+*);;

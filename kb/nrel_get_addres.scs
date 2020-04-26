@@ -1,0 +1,36 @@
+sc_node_not_relation -> concept_addres;;
+
+nrel_get_addres
+=> nrel_main_idtf:
+		[c++ get addres(&)]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ операция взятия аддреса(&)]
+	    (* <- lang_ru;; *);
+
+<- arity : unary_relation;
+=> nrel_first_domain : concept_lvalue;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_get_addres;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Операция взятия аддреса - это операция которая возвращает аддрес выражения.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (взятие аддреса(&))](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_lvalue;
+		concept_addres	
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_get_addres;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Операция взятия аддреса(&) не применима к rvalue.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(взятие аддреса(&))](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_rvalue;
+		nrel_get_addres
+	};;
+*);;

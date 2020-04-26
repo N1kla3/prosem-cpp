@@ -1,0 +1,38 @@
+sc_node_not_relation -> concept_lvalue_cpp;;
+sc_node_not_relation -> concept_expression;;
+sc_node_norole_relation -> nrel_const;;
+
+
+concept_lvalue_cpp
+=> nrel_main_idtf:
+		[c++ lvalue]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ lvalue]
+	    (* <- lang_ru;; *);
+
+<= nrel_inclusion : concept_expression;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_lvalue_cpp;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[lvalue - выражение ссылающееся на область памяти.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (lvalue)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_expression;
+		concept_memory	
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_lvalue_cpp;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[lvalue может быть модифицируемым и не модифицируемым](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(lvalue)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		nrel_const;
+		concept_lvalue
+	};;
+*);;
