@@ -1,0 +1,41 @@
+sc_node_not_relation -> concept_function_template_cpp;;
+sc_node_not_relation -> concept_function;;
+sc_node_not_relation -> concept_object;;
+sc_node_role_relation -> rrel_template_argument_cpp;;
+sc_node_role_relation -> rrel_options_template_argument_cpp;;
+
+concept_function_template_cpp
+
+<= nrel_inclusion : concept_function;
+
+=> nrel_main_idtf:
+		[c++ function template]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ шаблонная функция]
+	    (* <- lang_ru;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_function_template_cpp;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Шаблонная функция - это обобщенное описание поведения функций, которые могут вызываться 														для объектов разных типов.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (шаблонная функция)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_function;
+		rrel_template_argument_cpp;
+		concept_object
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_function_template_cpp;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Любая шаблонная функция предполагает наличие определенных свойств параметризованного 														типа.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(шаблонная функция)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		rrel_template_argument_cpp;
+		rrel_options_template_argument_cpp
+	};;
+*);;
