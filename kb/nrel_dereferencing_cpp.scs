@@ -1,0 +1,37 @@
+sc_node_norole_relation -> nrel_dereferencing_cpp;;
+
+nrel_dereferencing_cpp
+=> nrel_main_idtf:
+		[c++ dereferencing(*)]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ разыменование указателя(*)]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : concept_pointer;
+=> nrel_second_domain : concept_value;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_dereferencing_cpp;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Операция разыменования - это операция которая возвращает значение указателя.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (разыменование указателя(*))](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_pointer;
+		concept_value	
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_dereferencing_cpp;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Нельзя разыменовать rvalue](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(разыменование указателя(*))](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_rvalue;
+		nrel_dereferencing_cpp
+	};;
+*);;

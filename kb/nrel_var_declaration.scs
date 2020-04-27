@@ -1,0 +1,36 @@
+sc_node_norole_relation -> nrel_var_declaration;;
+sc_node_norole_relation -> nrel_var_init;;
+
+nrel_var_declaration
+=> nrel_main_idtf:
+		[c++ variable declaration]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ объявление переменной]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : concept_variable;
+=> nrel_second_domain : concept_datatype;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_var_declaration;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Объявление переменной - это создание переменной в тексте программы.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (объявление переменной)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_programm_text
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_var_declaration;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Объявление может производится сразу с инициализацией переменной.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(объявление переменной)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		nrel_var_init
+	};;
+*);;
