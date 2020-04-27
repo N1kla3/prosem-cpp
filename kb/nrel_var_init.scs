@@ -1,0 +1,37 @@
+sc_node_norole_relation -> nrel_assignment;;
+
+nrel_var_init
+=> nrel_main_idtf:
+		[c++ variable initilization]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ инициализация переменной]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : concept_variable;
+=> nrel_second_domain : concept_value;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_var_init;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Инициализация означает, что переменной присвоено начальное значение.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (инициализация переменной)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_variable;
+		nrel_assignment
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_var_init;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Статические переменные инициализируются только один раз.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(инициализация переменной)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_variable;
+		concept_static
+	};;
+*);;

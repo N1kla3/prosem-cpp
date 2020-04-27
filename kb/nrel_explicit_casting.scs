@@ -1,0 +1,38 @@
+sc_node_norole_relation -> nrel_explicit_casting;;
+sc_node_not_relation -> concept_programmer;;
+
+nrel_explicit_casting
+=> nrel_main_idtf:
+		[c++ explicit type casting]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ явное приведение типов]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : concept_variable;
+=> nrel_second_domain : concept_datatype;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_explicit_casting;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Явное приведение типа - это преобразование значения переменной одного типа к значению другого типа.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Определение (явное приведение типов)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_datatype;
+		concept_value
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_explicit_casting;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Явное приведение типов задается программистом в тексте программы.](*<-lang_ru;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(явное приведение типов)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_programmer;
+		concept_programm_text
+	};;
+*);;
