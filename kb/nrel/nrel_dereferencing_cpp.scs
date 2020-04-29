@@ -15,7 +15,7 @@ nrel_dereferencing_cpp
 definition ->...
 (*
 	-> rrel_key_sc_element : nrel_dereferencing_cpp;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[Операция разыменования - это операция которая возвращает значение указателя.](*<-lang_ru;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Операция разыменования - это операция которая возвращает <b><sc_element sys_idtf="concept_value">значение</b> <b><sc_element sys_idtf="concept_pointer">указателя</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Определение (разыменование указателя(*))](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{
@@ -27,11 +27,11 @@ definition ->...
 statement ->...
 (*
 	-> rrel_key_sc_element : nrel_dereferencing_cpp;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[Нельзя разыменовать rvalue](*<-lang_ru;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Нельзя разыменовать <b><sc_element sys_idtf="concept_rvalue_cpp">rvalue</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Утверждение(разыменование указателя(*))](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{
-		concept_rvalue;
+		concept_rvalue_cpp;
 		nrel_dereferencing_cpp
 	};;
 *);;

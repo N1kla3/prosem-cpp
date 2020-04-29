@@ -15,7 +15,7 @@ concept_rvalue_cpp
 definition ->...
 (*
 	-> rrel_key_sc_element : concept_rvalue_cpp;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[rvalue - выражение являющееся значением.](*<-lang_ru;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[rvalue - <b><sc_element sys_idtf="concept_expression">выражение</b> являющееся <b><sc_element sys_idtf="concept_value">значением</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Определение (rvalue)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{
@@ -27,11 +27,11 @@ definition ->...
 statement ->...
 (*
 	-> rrel_key_sc_element : concept_rvalue_cpp;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[К rvalue не применима операция взятия аддреса(&)](*<-lang_ru;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[К <b><sc_element sys_idtf="concept_rvalue_cpp">rvalue</b> не применима операция <b><sc_element sys_idtf="nrel_get_addres">взятия аддреса(&)</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Утверждение(rvalue)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{
-		concept_rvalue;
+		concept_rvalue_cpp;
 		nrel_get_addres
 	};;
 *);;

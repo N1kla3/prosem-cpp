@@ -18,12 +18,11 @@ concept_function_template_cpp
 definition ->...
 (*
 	-> rrel_key_sc_element : concept_function_template_cpp;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[Шаблонная функция - это обобщенное описание поведения функций, которые могут вызываться 														для объектов разных типов.](*<-lang_ru;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Шаблонная функция - это обобщенное описание поведения <b><sc_element sys_idtf="concept_function">функций</b>, которые могут вызываться 														для <b><sc_element sys_idtf="concept_object">объектов</b> разных типов.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Определение (шаблонная функция)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{
 		concept_function;
-		rrel_template_argument_cpp;
 		concept_object
 	};;
 *);;
@@ -31,7 +30,7 @@ definition ->...
 statement ->...
 (*
 	-> rrel_key_sc_element : concept_function_template_cpp;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[Любая шаблонная функция предполагает наличие определенных свойств параметризованного 														типа.](*<-lang_ru;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Любая шаблонная функция предполагает наличие определенных <b><sc_element sys_idtf="rrel_options_template_argument_cpp">свойств</b> <b><sc_element sys_idtf="rrel_template_argument_cpp">параметризованного 														типа</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Утверждение(шаблонная функция)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{

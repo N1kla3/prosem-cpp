@@ -17,7 +17,7 @@ rrel_func_arg_ref
 definition ->...
 (*
 	-> rrel_key_sc_element : rrel_func_arg_ref;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[Передача параметров по ссылке - это передача в функцию ссылки на обьект.](*<-lang_ru;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Передача параметров по ссылке - это передача в <b><sc_element sys_idtf="concept_function">функцию</b> <b><sc_element sys_idtf="concept_reference">ссылки</b> на <b><sc_element sys_idtf="concept_object">обьект</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Определение (передача аргумента по ссылке)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{
@@ -30,7 +30,7 @@ definition ->...
 statement ->...
 (*
 	-> rrel_key_sc_element : rrel_func_arg_ref;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[Передача по ссылке позволяет возвратить из функции сразу несколько значений.](*<-lang_ru;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Передача по ссылке позволяет <b><sc_element sys_idtf="nrel_return_value">возвратить из функции</b> сразу несколько значений.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Утверждение(передача аргумента по ссылке)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{

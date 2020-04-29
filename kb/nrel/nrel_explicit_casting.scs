@@ -16,7 +16,7 @@ nrel_explicit_casting
 definition ->...
 (*
 	-> rrel_key_sc_element : nrel_explicit_casting;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[Явное приведение типа - это преобразование значения переменной одного типа к значению другого типа.](*<-lang_ru;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Явное приведение <b><sc_element sys_idtf="concept_datatype">типа</b> - это преобразование <b><sc_element sys_idtf="concept_value">значения</b> переменной одного типа к значению другого типа.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Определение (явное приведение типов)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{
@@ -28,7 +28,7 @@ definition ->...
 statement ->...
 (*
 	-> rrel_key_sc_element : nrel_explicit_casting;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[Явное приведение типов задается программистом в тексте программы.](*<-lang_ru;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Явное приведение типов задается <b><sc_element sys_idtf="concept_programmer">программистом</b> в <b><sc_element sys_idtf="concept_programm_text">тексте программы</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Утверждение(явное приведение типов)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{

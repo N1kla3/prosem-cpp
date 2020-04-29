@@ -15,7 +15,7 @@ nrel_var_init
 definition ->...
 (*
 	-> rrel_key_sc_element : nrel_var_init;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[Инициализация означает, что переменной присвоено начальное значение.](*<-lang_ru;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Инициализация означает, что <b><sc_element sys_idtf="concept_variable">переменной</b> <b><sc_element sys_idtf="nrel_assignment">присвоено</b> начальное значение.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Определение (инициализация переменной)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{
@@ -27,7 +27,7 @@ definition ->...
 statement ->...
 (*
 	-> rrel_key_sc_element : nrel_var_init;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[Статические переменные инициализируются только один раз.](*<-lang_ru;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_static">Статические</b> <b><sc_element sys_idtf="concept_variable">переменные</b> инициализируются только один раз.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Утверждение(инициализация переменной)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{

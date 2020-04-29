@@ -1,0 +1,37 @@
+sc_node_not_relation -> concept_pointer;;
+sc_node_not_relation -> concept_variable;;
+sc_node_not_relation -> concept_addres;;
+sc_node_not_relation -> concept_data;;
+sc_node_not_relation -> concept_reference;;
+
+concept_pointer
+	=> nrel_main_idtf:
+		[pointer]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [указатель]
+	    (* <- lang_ru;; *);;
+        
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_pointer;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Указатель – <b><sc_element sys_idtf="concept_variable">переменная</b>, значением которой является <b><sc_element sys_idtf="concept_addres">адрес ячейки памяти</b>. То есть 								указатель ссылается на блок данных  из области памяти.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (указатель)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_variable;
+		concept_addres
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_pointer;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Указатели используются для передачи <b><sc_element sys_idtf="concept_data">данных</b> по <b><sc_element sys_idtf="concept_reference">ссылке</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(указатель)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_data;
+		concept_reference
+	};;
+*);;

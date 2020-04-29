@@ -15,11 +15,10 @@ nrel_get_addres
 definition ->...
 (*
 	-> rrel_key_sc_element : nrel_get_addres;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[Операция взятия аддреса - это операция которая возвращает аддрес выражения.](*<-lang_ru;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Операция взятия аддреса - это операция которая возвращает <b><sc_element sys_idtf="concept_addres">аддрес</b> выражения.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Определение (взятие аддреса(&))](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{
-		concept_lvalue_cpp;
 		concept_addres	
 	};;
 *);;
@@ -27,7 +26,7 @@ definition ->...
 statement ->...
 (*
 	-> rrel_key_sc_element : nrel_get_addres;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[Операция взятия аддреса(&) не применима к rvalue.](*<-lang_ru;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Операция взятия аддреса(&) не применима к <b><sc_element sys_idtf="concept_rvalue_cpp">rvalue</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Утверждение(взятие аддреса(&))](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{

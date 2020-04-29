@@ -1,0 +1,45 @@
+sc_node_norole_relation -> nrel_friend_function_cpp;;
+sc_node_norole_relation -> nrel_class_member;;
+sc_node_role_relation -> concept_access_mod_private;;
+sc_node_role_relation -> concept_access_mod_protected;;
+
+nrel_friend_function_cpp
+
+=> nrel_main_idtf:
+		[c++ friend function]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ дружественная функция]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_second_domain : concept_function;
+=> nrel_first_domain : concept_class;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_friend_function_cpp;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Дружественная функция — это <b><sc_element sys_idtf="concept_function">функция</b>, которая не является <b><sc_element sys_idtf="nrel_class_member">членом класса</b>, но имеет доступ 														к членам класса, объявленным в полях <b><sc_element sys_idtf="concept_access_mod_private">private</b> или <b><sc_element sys_idtf="concept_access_mod_protected">protected</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (дружественная функция)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_function;
+		nrel_class_member;
+		concept_access_mod_private;
+		concept_access_mod_protected
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_friend_function_cpp;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_function">Функция</b> может использоваться, как дружественная к нескольким <b><sc_element sys_idtf="concept_class">классам</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(дружественная функция)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_class;
+		concept_function
+	};;
+*);;
+
+
