@@ -1,0 +1,94 @@
+sc_node_not_relation -> mainCpp(*<-programm_file_cpp;;*);;
+concept_node_not_relation <- nrel_macro_cpp : concept_long_long(*<- concept_datatype;;*);;
+mainCpp => nrel_using_namespace : std(*<-concept_namespace;;*);;
+
+concept_namespace -> my
+(* <= nrel_inclusion : mainCpp;;
+	=> nrel_list_of_operators : ..my_list_operators
+	(*
+		<- sc_node_not_relation;;
+		->eNums
+		(*
+			<- concept_enum;;
+			=> nrel_enum_elem : {
+				ZERO;
+				ONE				
+			};;			
+		*);;
+		-> GLOBAL
+		(*
+			<- concept_variable;;
+ 			=> nrel_modificator:concept_const;;
+			=> nrel_datatype : concept_int;;
+			=>nrel_assignment:5;;
+		*);;
+		-> func
+		(*
+			<- concept_function;;
+			=>nrel_return_type:concept_int;;
+		*);;
+		-> funcPrint
+		(*
+			<- concept_function;;
+			=>nrel_return_type:concept_void;;
+		*);;
+		-> Fruit
+		(*
+			<- concept_class;;
+			->c_Fruit(*<- concept_constructor;;=> nrel_modificator:{
+							concept_public;concept_default};;*);;
+			=> rrel_virtual_method:justVirtual
+			(*
+				<-concept_function;;
+				=> nrel_modificator:{concept_noexcept;concept_public};;
+				=>nrel_return_type:concept_int;;
+				=>...
+				(*
+					<- concept_function_body;;
+					=> return_value:5;;
+				*);;
+			*);;
+			=> rrel_pure_virtual_method:getInfo
+			(*
+				<-concept_function;;
+				=> nrel_modificator:concept_public;;
+				=>nrel_return_type:concept_void;;
+			*);;
+		*);;
+		-> Apple
+		(*
+			<- concept_class;;
+			=> nrel_protected_inherit:Fruit;;
+			=> nrel_field:appleValue(*=>nrel_datatype:concept_float;;
+					=>nrel_modificator:concept_public;;*);;
+			->c_Apple
+			(*
+				<- concept_constructor;;
+				=> nrel_modificator:concept_public;;
+				<-...(*<-concept_function_body;;
+				=>rrel_call_inherit_constructor:c_Fruit;;
+				->appleValue(*=> nrel_assign:3.5f;;*);;*);;
+			*);;
+			=> rrel_method:getAppleValue 	
+			(*
+				<-concept_function;;
+				=> nrel_modificator:{concept_const;concept_protected};;
+				=>nrel_return_type:concept_int;;
+				=>...
+				(*
+					<- concept_function_body;;
+					=> return_value:...(*<=nrel_type_casting:appleValue;;
+							<=nrel_datatype:concept_int;;*);;
+				*);;
+			*);;
+			=> rrel_overriding:...
+			(*	
+				<=overrided_body:getInfo;;
+				=> nrel_modificator:concept_public;;
+				=>nrel_call_function:cout(*=>nrel_argument:[Apple];;*);;
+			*);;
+		*);;
+	*);;
+*);;
+
+
