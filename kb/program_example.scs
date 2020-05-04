@@ -1,6 +1,8 @@
 sc_node_not_relation -> mainCpp(*<-programm_file_cpp;;*);;
-concept_node_not_relation <- nrel_macro_cpp : concept_long_long(*<- concept_datatype;;*);;
-mainCpp => nrel_using_namespace : std(*<-concept_namespace;;*);;
+ll => nrel_macro_cpp : concept_long_long(*<- concept_datatype;;*);;
+
+mainCpp=>nrel_using_namespace : std;;
+mainCpp=>nrel_include_cpp:{iostream;vector;algorithm};;
 
 concept_namespace -> my
 (* <= nrel_inclusion : mainCpp;;
@@ -86,6 +88,135 @@ concept_namespace -> my
 				<=overrided_body:getInfo;;
 				=> nrel_modificator:concept_public;;
 				=>nrel_call_function:cout(*=>nrel_argument:[Apple];;*);;
+			*);;
+		*);;
+		-> Orange
+		(*
+			<- concept_class;;
+			=> nrel_public_inherit:Fruit;;
+			=> nrel_field:orangeField(*=>nrel_datatype:concept_int;;
+					=>nrel_modificator:concept_private;;*);;
+			->c_Orange
+			(*
+				<- concept_constructor;;
+				=> nrel_modificator:concept_protected;;
+				<-...(*<-concept_function_body;;
+				=>rrel_call_inherit_constructor:c_Fruit;;
+				->orangeField(*=> nrel_assign:6;;*);;*);;
+			*);;
+			=> rrel_method:OrangeFunc 	
+			(*
+				<-concept_function;;
+				=> nrel_parametr: num(*<- concept_variable;; => nrel_datatype: concept_int;;*);;
+				=> nrel_modificator:{concept_const;concept_protected};;
+				=>nrel_return_type:concept_int;;
+				=>...
+				(*
+					<- concept_function_body;;
+					=> return_value:...(*<- concept_variable;;     //здсь надо сделать умножение хз))
+							<=nrel_datatype:concept_int;;*);;
+				*);;
+			*);;
+			=> rrel_overriding:...
+			(*	
+				<=overrided_body:getInfo;;
+				=> nrel_modificator:concept_public;;
+				=>nrel_call_function:cout(*=>nrel_argument:[Orange];;*);;
+			*);;
+		*);;
+		-> Mutant
+		(*
+			<- concept_class;;
+			=> nrel_virtual_inherit:{Apple; Orange};;
+			=> nrel_field:var(*=>nrel_datatype:concept_int;;
+					=>nrel_modificator:concept_private;;*);;
+			->c_Mutant
+			(*
+				<- concept_constructor;;
+				=> concept_parametr:..var(*<- concept_reference;;=> nrel_modificator:concept_const;;*);;
+				=> nrel_modificator:{concept_private; concept_explicit};;
+				<-...(*<-concept_function_body;;
+				=>rrel_call_inherit_constructor:{c_Orange; c_Apple};;
+				->Mutant_this(*<- concept_this;;=> call_field: var(*=> nrel_assign:..var;;*);;*);;*);;
+			*);;
+			->getSmth
+			(*
+				<- concept_function_template;;=>nrel_template_parametr:T;;
+				=>nrel_reference_parametr:obj(*<-concept_reference;;*);;
+				=> nrel_modificator:concept_private;;
+				=> nrel_pointer_return_type:T;;
+				=>...(*<- concept_function_body;;=>return_value:obj;;*);;
+			*);;
+			=> rrel_method:getBoth 	
+			(*
+				<-concept_function;;
+				=> nrel_modificator:{concept_const;concept_private;concept_inline};;
+				=>nrel_return_type:concept_int;;
+				=>...
+				(*
+					<- concept_function_body;;
+					-> ..a(*<- concept_variable;; => nrel_datatype:concept_int;;
+					=> nrel_assignment:...(*=> call_function:OrangeFunc(*=>nrel_argument:3;;*);;*);;*);;
+					-> ..b(*<- concept_variable;; => nrel_datatype:concept_int;;
+					=> nrel_assignment:...(*=> call_function:getAppleValue;;*);;*);;
+					=> return_value:...(*<- concept_variable;;//здесь бляха сложекние
+							<=nrel_datatype:concept_int;;*);;
+				*);;
+			*);;
+			=> rrel_overriding:...
+			(*	
+				<=overrided_body:getInfo;;
+				=> nrel_modificator:concept_private;;
+				=>nrel_call_function:cout(*=>nrel_argument:[Mutant];;*);;
+			*);;
+		*);;
+		-> myStatic
+		(*
+			<- concept_template_class;;
+			=>nrel_template_parametr:T;;
+			<- myException(*<- concept_class;;<= nrel_public_inherit:exception
+			(*<=nrel_operator:std(*<-concept_namespace;;*);;*);;=>nrel_modificator:concept_public;;*);;
+			=> nrel_method:getVar
+			(*
+				=> nrel_modificator:{concept_static;concept_noexcept};;
+				=> nrel_return_type:concept_int;;
+				=> nrel_parametr:
+				{
+					obj(*=>nrel_datatype:concept_int;;<- concept_variable;;*);
+					num(*<-concept_variable;;=>nrel_instantiation:..T;;*)
+				};;
+			-> ...
+			(*
+				<- concept_function_body;;
+				<- ..var
+				(*=> nrel_datatype: concept_int;;<- concept_variable;;=> nrel_assignment:num(*<= concept_variable;;*);;*);;
+				<-...
+				(*
+					<- for_operator;;
+					=> nrel_for_var:i(*<- concept_variable;;=>nrel_assignment:[0];;*);;
+					=> nrel_for_change:i(*=>nrel_increment:i;;*);;
+					=> nrel_for_border:i(*=>nrel_less_then:[10];;*);;
+					=>for_operator_body:...
+					(*
+						<-..var(*=> nrel_increment:..var;;*);;
+						=> if_operator:...
+						(*
+							=>nrel_statement:..var(*=>less_then:[10];;*);;
+							->...(*<- concept_if_body;;
+							->..var(*<= nrel_decrement:..var;;*);;*);;
+							=>nrel_else_operator:...(*
+								<- if_operator(*
+								=>nrel_statement:..var(*=>equals:[10];;*);;
+								->...(*<- concept_if_body;;
+								->..var(*<= nrel_decrement:..var;;*);;*);;
+								=>nrel_throw:myException;;
+								=>nrel_else_operator:...(*->..var(*=>nrel_increment:..var;;*);;*);;
+							*);;
+						*);;
+					*);;
+				*);;
+				=>return_value:...(*<= nrel_value:..var;;*);;	*);;			
+			*);;
 			*);;
 		*);;
 	*);;
