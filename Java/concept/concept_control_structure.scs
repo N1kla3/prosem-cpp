@@ -1,0 +1,43 @@
+sc_node_not_relation->consept_control_structure;;
+
+sc_node_not_relation->concept_program_language;;
+
+
+sc_node_norole_relation -> nrel_expressions;;
+sc_node_norole_relation -> nrel_conditional_statements;;
+sc_node_norole_relation -> nrel_cycle;;
+sc_node_norole_relation -> nrel_exception;;
+
+
+consept_control_structure=> nrel_main_idtf: [Управляющая конструкция](* <- lang_ru;; *);;
+consept_control_structure=> nrel_main_idtf: [Control structure](* <- lang_en;; *);;
+definition ->...
+(*
+->rrel_key_sc_element: consept_control_structure;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Управляющая конструкция обозначает конструкцию языка программирования, позволяющия регламентировать порядок выполнения выражений программы.](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Определение (управляющая конструкция)](*<- lang_ru;;*);;
+=> nrel_using_constants: 
+{
+   program;
+   concept_program_language;
+   nrel_expressions
+
+
+};;
+*);;
+
+statement ->...
+(*
+->rrel_key_sc_element: consept_control_structure;;
+<= nrel_sc_text_translation: ...(*->rrel_example:[Управляющие конструкции включают в себя условные операторы, циклы, исключения.  ](*<-lang_ru;;*);;*);;
+=> nrel_main_idtf: [Утверждение(управляющая конструкция)](*<- lang_ru;;*);;
+=> nrel_using_constants: 
+{
+   nrel_conditional_statements;
+   nrel_cycle;
+   nrel_exception
+
+};;
+*);;
+
+consept_control_structure =>nrel_cycle : concept_code_block;;
