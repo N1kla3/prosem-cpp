@@ -1,0 +1,33 @@
+sc_node_not_relation -> concept_constructor;;
+
+concept_constructor
+=> nrel_main_idtf:
+		[c++ class constructor]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ конструктор класса]
+	    (* <- lang_ru;; *);
+<= nrel_inclusion:concept_function;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_constructor;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[конструктор класса (от англ. constructor) — специальный <b><sc_element sys_idtf="concept_function_body">блок инструкций</b>, вызываемый при <b><sc_element sys_idtf="nrel_instantiation">создании объекта</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (конструктор класса)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{	
+		concept_function_body;
+		nrel_instantiation
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_constructor;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Конструктор упрощает инициализацию <b><sc_element sys_idtf="concept_object">объекта</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(конструктор класса)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_object
+	};;
+*);;

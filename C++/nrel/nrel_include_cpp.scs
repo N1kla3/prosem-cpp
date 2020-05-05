@@ -1,0 +1,38 @@
+sc_node_norole_relation -> nrel_include_cpp;;
+sc_node_not_relation -> concept_directive;;
+
+nrel_include_cpp
+=> nrel_main_idtf:
+		[c++ directive include]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ директива include]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : concept_file;
+=> nrel_second_domain : concept_file;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_include_cpp;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Директива include - это <b><sc_element sys_idtf="concept_directive">директива</b> позволяющая добавить другой <b><sc_element sys_idtf="concept_file">файл</b> в файл.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (директива include)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_file;
+		concept_directive	
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_include_cpp;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Подключаемые <b><sc_element sys_idtf="concept_file">файлы</b> также могут иметь <b><sc_element sys_idtf="nrel_include_cpp">директивы include</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(директива include)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_file;
+		nrel_include_cpp
+	};;
+*);;

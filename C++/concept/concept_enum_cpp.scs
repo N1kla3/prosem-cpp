@@ -1,0 +1,33 @@
+sc_node_not_relation -> concept_enum;;
+
+concept_enum
+=> nrel_main_idtf:
+		[c++ enum]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ перечисление]
+	    (* <- lang_ru;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_enum;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Перечисление  — это тип данных, где любой <b><sc_element sys_idtf="nrel_enum_elem">перечислитель</b> определяется как символьная <b><sc_element sys_idtf="concept_const">константа</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (перечисление)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		nrel_enum_elem;
+		concept_const
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_enum;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Каждому <b><sc_element sys_idtf="nrel_enum_elem">перечислителю</b> автоматически присваивается <b><sc_element sys_idtf="concept_int">целочисленное значение</b> в зависимости от его позиции в списке перечисления. ](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(перечисление)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		nrel_enum_elem;
+		concept_int
+	};;
+*);;

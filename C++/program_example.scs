@@ -1,6 +1,6 @@
 sc_node_not_relation -> mainCpp(*<-programm_file_cpp;;*);;
-ll => nrel_macro_cpp : concept_long_long(*<- concept_datatype;;*);;
-
+ll => nrel_macro_cpp : concept_long_long;;
+concept_file -> {iostream; vector; algorithm};;
 mainCpp=>nrel_using_namespace : std;;
 mainCpp=>nrel_include_cpp:{iostream;vector;algorithm};;
 
@@ -13,8 +13,8 @@ concept_namespace -> my
 		(*
 			<- concept_enum;;
 			=> nrel_enum_elem : {
-				ZERO;
-				ONE				
+				ZERO(*<- concept_variable;;*);
+				ONE(*<- concept_variable;;*)				
 			};;			
 		*);;
 		-> GLOBAL
@@ -22,7 +22,7 @@ concept_namespace -> my
 			<- concept_variable;;
  			=> nrel_modificator:concept_const;;
 			=> nrel_datatype : concept_int;;
-			=>nrel_assignment:5;;
+			=>nrel_assignment:[5];;
 		*);;
 		-> func
 		(*

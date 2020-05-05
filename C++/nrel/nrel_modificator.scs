@@ -1,0 +1,28 @@
+sc_node_norole_relation -> nrel_modificator;;
+
+nrel_modificator
+=> nrel_main_idtf:
+		[c++ modificator]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ модификатор]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : concept_operand;
+=> nrel_second_domain : concept_keyword;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_modificator;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Модификатор - это <b><sc_element sys_idtf="concept_keyword">ключевое слово</b> описывающее <b><sc_element sys_idtf="concept_function">функцию</b> или <b><sc_element sys_idtf="concept_variable">переменную</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (модификатор)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_function;
+		concept_variable;
+		concept_keyword
+	};;
+*);;
+
+

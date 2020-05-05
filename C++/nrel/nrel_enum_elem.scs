@@ -1,0 +1,35 @@
+sc_node_norole_relation -> nrel_enum_elem;;
+
+nrel_enum_elem
+=> nrel_main_idtf:
+		[c++ enum elem]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ перечислитель]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : concept_enum;
+=> nrel_second_domain : concept_variable;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_enum_elem;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Перечислитель - это элемент <b><sc_element sys_idtf="concept_enum">перечисления</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (перечислитель)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_enum	
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_enum_elem;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Перечислитель это <b><sc_element sys_idtf="concept_const">константа</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(перечислитель)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_const
+	};;
+*);;

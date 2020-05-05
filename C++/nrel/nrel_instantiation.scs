@@ -1,39 +1,37 @@
-sc_node_norole_relation -> nrel_instantiation_of_template;;
+sc_node_norole_relation -> nrel_instantiation;;
 
-nrel_instantiation_of_template
+nrel_instantiation
 => nrel_main_idtf:
-		[c++ instantiation of template]
+		[c++ instantiation]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ конкретизация шаблона]
+	    [с++ конкретизация]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;
-=> nrel_first_domain : concept_template;
-=> nrel_second_domain : concept_datatype;;
+=> nrel_first_domain : concept_object;
+=> nrel_second_domain : concept_constructor;;
 
 definition ->...
 (*
-	-> rrel_key_sc_element : nrel_instantiation_of_template;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[Конкретизация шаблона - это определение <b><sc_element sys_idtf="concept_datatype">типа</b> <b><sc_element sys_idtf="nrel_template_parametr">шаблонной переменной</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-	=> nrel_main_idtf: [Определение (конкретизация шаблона)](*<- lang_ru;;*);;
+	-> rrel_key_sc_element : nrel_instantiation;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Конкретизация - это вызов <b><sc_element sys_idtf="concept_constructor">конструктора</b> класса для инициализации <b><sc_element sys_idtf="concept_object">объекта</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (конкретизация)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{
-		concept_datatype;
-		nrel_template_parametr	
+		concept_constructor;
+		concept_object	
 	};;
 *);;
 
 statement ->...
 (*
-	-> rrel_key_sc_element : nrel_instantiation_of_template;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_class">Классы</b>, <b><sc_element sys_idtf="concept_function">функции</b>, <b><sc_element sys_idtf="concept_variable">переменные</b> могут быть <b><sc_element sys_idtf="nrel_instantiation">конкретизированы</b> от конретизированного шаблонного аргумента.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
-	=> nrel_main_idtf: [Утверждение(конкретизация шаблона)](*<- lang_ru;;*);;
+	-> rrel_key_sc_element : nrel_instantiation;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[При конкретизации <b><sc_element sys_idtf="concept_constructor">конструктору</b> можно передавать <b><sc_element sys_idtf="nrel_argument">аргументы</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(конкретизация)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{
-		nrel_instantiation;
-		concept_function;
-		concept_class;
-		concept_variable
+		concept_constructor;
+		nrel_argument
 	};;
 *);;
