@@ -1,0 +1,36 @@
+sc_node_not_relation -> concept_this;;
+
+
+concept_this
+	=> nrel_main_idtf:
+		[c++ this]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ this]
+	    (* <- lang_ru;; *);
+<=inclusion:concept_pointer;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_this;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_pointer">Указатель</b> this хранит <b><sc_element sys_idtf="concept_addres">адрес</b> определённого <b><sc_element sys_idtf="concept_object">объекта</b> класса.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (this)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_pointer;
+		concept_addres;
+		concept_object
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_this;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[this можно <b><sc_element sys_idtf="nrel_dereferencing">разыменовать</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(this)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		nrel_dereferencing
+	};;
+*);;
+        

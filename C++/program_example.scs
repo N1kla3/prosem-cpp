@@ -93,7 +93,7 @@ concept_namespace -> my
 		-> Orange
 		(*
 			<- concept_class;;
-			=> nrel_public_inherit:Fruit;;
+			=> nrel_inherit:Fruit;;
 			=> nrel_field:orangeField(*=>nrel_datatype:concept_int;;
 					=>nrel_modificator:concept_private;;*);;
 			->c_Orange
@@ -172,7 +172,7 @@ concept_namespace -> my
 		*);;
 		-> myStatic
 		(*
-			<- concept_template_class;;
+			<- concept_template_class_cpp;;
 			=>nrel_template_parametr:T;;
 			<- myException(*<- concept_class;;<= nrel_public_inherit:exception
 			(*<=nrel_operator:std(*<-concept_namespace;;*);;*);;=>nrel_modificator:concept_public;;*);;

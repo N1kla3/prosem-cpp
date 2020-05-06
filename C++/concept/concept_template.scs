@@ -1,0 +1,36 @@
+sc_node_not_relation -> concept_template;;
+
+concept_template
+
+=> nrel_inclusion : {concept_template_class_cpp;concept_function_template_cpp};
+
+=> nrel_main_idtf:
+		[c++ template]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ шаблон]
+	    (* <- lang_ru;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_template;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Шаблоны  — средство языка C++, предназначенное для кодирования обобщённых алгоритмов, без привязки к некоторым <b><sc_element sys_idtf="nrel_parametr">параметрам</b> и <b><sc_element sys_idtf="concept_type">типам</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (шаблон)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		nrel_parametr;
+		concept_type
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_template;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Шаблоны применяются к <b><sc_element sys_idtf="concept_class">классам</b> и <b><sc_element sys_idtf="concept_function">функциям</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(шаблон)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_function;
+		concept_class
+	};;
+*);;

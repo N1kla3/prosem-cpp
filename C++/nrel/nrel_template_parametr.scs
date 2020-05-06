@@ -1,0 +1,37 @@
+sc_node_norole_relation -> nrel_template_parametr;;
+
+nrel_template_parametr
+=> nrel_main_idtf:
+		[c++ template parametr]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ шаблонный параметр]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : concept_template;
+=> nrel_second_domain : concept_type;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_template_parametr;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Параметр <b><sc_element sys_idtf="concept_template">шаблона</b> <b><sc_element sys_idtf="concept_type">тип</b> которого определяется после <b><sc_element sys_idtf="nrel_instantiation_of_template">инстанцирования шаблона</b>. ](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (шаблонный параметр)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_template;
+		concept_type;
+		nrel_instantiation_of_template	
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_template_parametr;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Возможно наличие нескольких параметров у <b><sc_element sys_idtf="concept_template">шаблона</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(шаблонный параметр)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_template
+	};;
+*);;
