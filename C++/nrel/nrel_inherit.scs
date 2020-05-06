@@ -1,0 +1,38 @@
+sc_node_norole_relation -> nrel_inherit;;
+
+nrel_inherit
+=> nrel_main_idtf:
+		[c++ inheritance]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ наследование]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : concept_class;
+=> nrel_second_domain : concept_class;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_inherit;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Наследование — концепция объектно-ориентированного программирования, согласно которой <b><sc_element sys_idtf="concept_class">класс</b> может использовать <b><sc_element sys_idtf="nrel_field">данные</b> и <b><sc_element sys_idtf="nrel_method">функциональность</b> некоторого существующего класса](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (наследование)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_class;
+		nrel_field;
+		nrel_method	
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_inherit;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Установка <b><sc_element sys_idtf="nrel_inheritance">отношения наследования</b> между классами порождает <b><sc_element sys_idtf="class_hierarchy">иерархию классов</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(наследование)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		nrel_inheritance;
+		class_hierarchy
+	};;
+*);;

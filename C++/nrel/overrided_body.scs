@@ -1,0 +1,37 @@
+sc_node_norole_relation -> overrided_body;;
+
+overrided_body
+=> nrel_main_idtf:
+		[c++ overrided body]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ переопределенное тело]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : concept_function;
+=> nrel_second_domain : concept_function_body;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : overrided_body;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="conceptio_function_body">Тело</b> <b><sc_element sys_idtf="rrel_overriding">переопределенной функции</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (переопределенное тело)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_function_body;
+		rrel_overriding	
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : overrided_body;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Тело переопределенного <b><sc_element sys_idtf="nrel_method">метода</b> привязано к определенному <b><sc_element sys_idtf="conceptio_class">классу</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(переопределенное тело)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		nrel_method;
+		concept_class
+	};;
+*);;

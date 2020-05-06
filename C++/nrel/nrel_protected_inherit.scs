@@ -1,0 +1,39 @@
+sc_node_norole_relation -> nrel_protected_inherit;;
+
+nrel_protected_inherit
+=> nrel_main_idtf:
+		[c++ protected inheritance]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ защищенное наследование]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : concept_class;
+=> nrel_second_domain : concept_class;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_protected_inherit;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Защищенное наследование - это <b><sc_element sys_idtf="nrel_inherit">наследование</b> при котором <b><sc_element sys_idtf="concept_protected">protected</b>, <b><sc_element sys_idtf="concept_public">public</b> <b><sc_element sys_idtf="class_member">члены базового класса</b> становятся protected.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (защищенное наследование)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		nrel_inherit;
+		concept_protected;
+		concept_public;
+		class_member
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_protected_inherit;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[ <b><sc_element sys_idtf="concept_private">Закрытые</b> <b><sc_element sys_idtf="class_member">члены класса</b> остаются private при защищенном наследовании.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(защищенное наследование)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_private;
+		class_member
+	};;
+*);;

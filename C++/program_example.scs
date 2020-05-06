@@ -83,11 +83,11 @@ concept_namespace -> my
 							<=nrel_datatype:concept_int;;*);;
 				*);;
 			*);;
-			=> rrel_overriding:...
+			=> rrel_overriding:getInfo
 			(*	
-				<=overrided_body:getInfo;;
+				=>overrided_body:...(*<- concept_function_body;;
 				=> nrel_modificator:concept_public;;
-				=>nrel_call_function:cout(*=>nrel_argument:[Apple];;*);;
+				=>nrel_call_function:cout(*=>nrel_argument:[Apple];;*);;*);;
 			*);;
 		*);;
 		-> Orange
@@ -117,11 +117,11 @@ concept_namespace -> my
 							<=nrel_datatype:concept_int;;*);;
 				*);;
 			*);;
-			=> rrel_overriding:...
+			=> rrel_overriding:getInfo
 			(*	
-				<=overrided_body:getInfo;;
+				=>overrided_body:...(*<-concept_function_body;;
 				=> nrel_modificator:concept_public;;
-				=>nrel_call_function:cout(*=>nrel_argument:[Orange];;*);;
+				=>nrel_call_function:cout(*=>nrel_argument:[Orange];;*);;*);;
 			*);;
 		*);;
 		-> Mutant
@@ -163,11 +163,11 @@ concept_namespace -> my
 							<=nrel_datatype:concept_int;;*);;
 				*);;
 			*);;
-			=> rrel_overriding:...
+			=> rrel_overriding:getInfo
 			(*	
-				<=overrided_body:getInfo;;
+				<=overrided_body:...(*<- concept_function_body;;
 				=> nrel_modificator:concept_private;;
-				=>nrel_call_function:cout(*=>nrel_argument:[Mutant];;*);;
+				=>nrel_call_function:cout(*=>nrel_argument:[Mutant];;*);;*);;
 			*);;
 		*);;
 		-> myStatic
