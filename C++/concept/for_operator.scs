@@ -1,0 +1,33 @@
+sc_node_not_relation -> for_operator;;
+
+for_operator
+<= inclusion:concept_cycle;
+	=> nrel_main_idtf:
+		[cycle for]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [цикл for]
+	    (* <- lang_ru;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : for_operator;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[for - это <b><sc_element sys_idtf="concept_cycle">цикл</b> использующийся при известном количестве итераций](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (цикл for)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_cycle
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : for_operator;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[В <b><sc_element sys_idtf="concept_cycle">цикле</b> for можно задавать <b><sc_element sys_idtf="nrel_for_step">шаг цикла</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(цикл for)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		nrel_for_step;
+		concept_cycle
+	};;
+*);;

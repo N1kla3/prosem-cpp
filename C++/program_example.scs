@@ -44,10 +44,10 @@ concept_namespace -> my
 				<-concept_function;;
 				=> nrel_modificator:{concept_noexcept;concept_public};;
 				=>nrel_return_type:concept_int;;
-				=>...
-				(*
-					<- concept_function_body;;
-					=> return_value:5;;
+				=>function_body:...
+				(*	
+					<- concept_codeblock;;
+					=> return_value:[5];;
 				*);;
 			*);;
 			=> rrel_pure_virtual_method:getInfo
@@ -76,16 +76,16 @@ concept_namespace -> my
 				<-concept_function;;
 				=> nrel_modificator:{concept_const;concept_protected};;
 				=>nrel_return_type:concept_int;;
-				=>...
+				=>concept_function_body:...
 				(*
-					<- concept_function_body;;
+					<- concept_codeblock;;
 					=> return_value:...(*<=nrel_type_casting:appleValue;;
 							<=nrel_datatype:concept_int;;*);;
 				*);;
 			*);;
 			=> rrel_overriding:getInfo
 			(*	
-				=>overrided_body:...(*<- concept_function_body;;
+				=>overrided_body:Apple_getInfo(*<- concept_codeblock;;
 				=> nrel_modificator:concept_public;;
 				=>nrel_call_function:cout(*=>nrel_argument:[Apple];;*);;*);;
 			*);;
@@ -102,7 +102,7 @@ concept_namespace -> my
 				=> nrel_modificator:concept_protected;;
 				<-...(*<-concept_function_body;;
 				=>rrel_call_inherit_constructor:c_Fruit;;
-				->orangeField(*=> nrel_assign:6;;*);;*);;
+				->orangeField(*=> nrel_assign:[6];;*);;*);;
 			*);;
 			=> rrel_method:OrangeFunc 	
 			(*
@@ -110,18 +110,18 @@ concept_namespace -> my
 				=> nrel_parametr: num(*<- concept_variable;; => nrel_datatype: concept_int;;*);;
 				=> nrel_modificator:{concept_const;concept_protected};;
 				=>nrel_return_type:concept_int;;
-				=>...
+				=>function_body:...
 				(*
-					<- concept_function_body;;
-					=> return_value:...(*<- concept_variable;;     //здсь надо сделать умножение хз))
-							<=nrel_datatype:concept_int;;*);;
+					<- concept_codeblock;;
+					=> return_value:...(*<= call_function:...(*<- operator_multi;;
+						=>nrel_argument:{num;orangeField};;*);;*);;
 				*);;
 			*);;
 			=> rrel_overriding:getInfo
 			(*	
-				=>overrided_body:...(*<-concept_function_body;;
+				=>overrided_body:Orange_getInfo(*<-concept_codeblock;;
 				=> nrel_modificator:concept_public;;
-				=>nrel_call_function:cout(*=>nrel_argument:[Orange];;*);;*);;
+				=>call_function:...(*<- operator_left_shift;;=>nrel_argument:{[Orange];cout};;*);;*);;
 			*);;
 		*);;
 		-> Mutant
@@ -145,29 +145,27 @@ concept_namespace -> my
 				=>nrel_reference_parametr:obj(*<-concept_reference;;*);;
 				=> nrel_modificator:concept_private;;
 				=> nrel_pointer_return_type:T;;
-				=>...(*<- concept_function_body;;=>return_value:obj;;*);;
+				=>function_body:...(*=>return_value:obj;;*);;
 			*);;
 			=> rrel_method:getBoth 	
 			(*
 				<-concept_function;;
 				=> nrel_modificator:{concept_const;concept_private;concept_inline};;
 				=>nrel_return_type:concept_int;;
-				=>...
+				=>function_body:...
 				(*
-					<- concept_function_body;;
 					-> ..a(*<- concept_variable;; => nrel_datatype:concept_int;;
-					=> nrel_assignment:...(*=> call_function:OrangeFunc(*=>nrel_argument:3;;*);;*);;*);;
+						=> nrel_assignment:...(*<=call_function:...(*<-OrangeFunc(*=>nrel_argument:3;;*);;*);;*);;*);;
 					-> ..b(*<- concept_variable;; => nrel_datatype:concept_int;;
-					=> nrel_assignment:...(*=> call_function:getAppleValue;;*);;*);;
-					=> return_value:...(*<- concept_variable;;//здесь бляха сложекние
-							<=nrel_datatype:concept_int;;*);;
+						=> nrel_assignment:...(*<=call_function:...(*<-getAppleValue;;*);;*);;*);;
+					=> return_value:...(*<=call_function:...(*<- operator_plus;;=> nrel_argument:{..a;..b};;*);;*);;
 				*);;
 			*);;
 			=> rrel_overriding:getInfo
 			(*	
-				<=overrided_body:...(*<- concept_function_body;;
+				<=overrided_body:...(*<- concept_codeblock;;
 				=> nrel_modificator:concept_private;;
-				=>nrel_call_function:cout(*=>nrel_argument:[Mutant];;*);;*);;
+				=>call_function:...(*<- operator_left_shift;;=>nrel_argument:{[Mutant];cout};;*);;*);;
 			*);;
 		*);;
 		-> myStatic
@@ -176,41 +174,48 @@ concept_namespace -> my
 			=>nrel_template_parametr:T;;
 			<- myException(*<- concept_class;;<= nrel_public_inherit:exception
 			(*<=nrel_operator:std(*<-concept_namespace;;*);;*);;=>nrel_modificator:concept_public;;*);;
-			=> nrel_method:getVar
+			=> rrel_method:getVar
 			(*
 				=> nrel_modificator:{concept_static;concept_noexcept};;
 				=> nrel_return_type:concept_int;;
 				=> nrel_parametr:
 				{
 					obj(*=>nrel_datatype:concept_int;;<- concept_variable;;*);
-					num(*<-concept_variable;;=>nrel_instantiation:..T;;*)
+					num(*<-concept_variable;;=>nrel_instantiation:T;;*)
 				};;
-			-> ...
+			=> function_body:...
 			(*
-				<- concept_function_body;;
+				<- concept_codeblock;;
 				<- ..var
 				(*=> nrel_datatype: concept_int;;<- concept_variable;;=> nrel_assignment:num(*<= concept_variable;;*);;*);;
 				<-...
 				(*
 					<- for_operator;;
-					=> nrel_for_var:i(*<- concept_variable;;=>nrel_assignment:[0];;*);;
-					=> nrel_for_change:i(*=>nrel_increment:i;;*);;
-					=> nrel_for_border:i(*=>nrel_less_then:[10];;*);;
-					=>for_operator_body:...
-					(*
-						<-..var(*=> nrel_increment:..var;;*);;
+					=> nrel_for_counter:i(*<- concept_variable;;=>nrel_assignment:[0];;*);;
+					=> nrel_for_step:i(*=>nrel_assignment:...(*<= call_function:...(*<-operator_increment;;
+							=>nrel_argument:i;;*);;*);;*);;
+					=> nrel_cycle_border:...(*<= nrel_call_function:less_then(*=>argument:{i;[10]};;*);;*);;
+					=>cycle_body:...
+					(*	
+						<- concept_codeblock;;
+						<-..var(*=>nrel_assignment:...(*<= call_function:...(*<-operator_increment;;
+							=>nrel_argument:..var;;*);;*);;*);;
 						=> if_operator:...
 						(*
 							=>nrel_statement:..var(*=>less_then:[10];;*);;
-							->...(*<- concept_if_body;;
-							->..var(*<= nrel_decrement:..var;;*);;*);;
+							->if_body:...(*<- concept_codeblock;;
+							->..var(*=>nrel_assignment:...(*<= call_function:...(*<-operator_decrement;;
+								=>nrel_argument:..var;;*);;*);;*);;*);;
 							=>nrel_else_operator:...(*
 								<- if_operator(*
 								=>nrel_statement:..var(*=>equals:[10];;*);;
-								->...(*<- concept_if_body;;
-								->..var(*<= nrel_decrement:..var;;*);;*);;
+								->if_body:...(*<- concept_codeblock;;
+								->..var(*=>nrel_assignment:...(*<= call_function:...(*<-operator_decrement;;
+									=>nrel_argument:..var;;*);;*);;*);;*);;
 								=>nrel_throw:myException;;
-								=>nrel_else_operator:...(*->..var(*=>nrel_increment:..var;;*);;*);;
+								=>nrel_else_operator:...(*<-concept_codeblock;;
+									->..var(*=>nrel_assignment:...(*<= call_function:...
+									(*<-operator_increment;;=>nrel_argument:..var;;*);;*);;*);;*);;
 							*);;
 						*);;
 					*);;

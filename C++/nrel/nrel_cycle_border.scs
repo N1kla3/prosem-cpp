@@ -1,0 +1,36 @@
+sc_node_norole_relation -> nrel_cycle_border;;
+
+nrel_cycle_border
+=> nrel_main_idtf:
+		[c++ cycle statement]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ условие цикла]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : for_operator;
+=> nrel_second_domain : concept_value;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_cycle_border;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Это <b><sc_element sys_idtf="nrel_statement">условие</b> при котором <b><sc_element sys_idtf="concept_cycle">цикл</b> выполняется](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (условие цикла)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		nrel_statement;
+		concept_cycle	
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_cycle_border;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Иногда в программах используются <b><sc_element sys_idtf="concept_cycle">циклы</b>, выход из которых не предусмотрен логикой программы.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(условие цикла)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_cycle
+	};;
+*);;

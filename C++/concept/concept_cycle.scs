@@ -1,0 +1,31 @@
+sc_node_not_relation -> concept_cycle;;
+
+concept_cycle
+=> nrel_main_idtf:
+		[c++ cycle]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ цикл]
+	    (* <- lang_ru;; *);;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : concept_cycle;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Цикл — разновидность управляющей конструкции предназначенная для организации многократного исполнения набора инструкций.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (цикл)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_instruction
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : concept_cycle;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Цикл можно прервать с помощью операции <b><sc_element sys_idtf="concept_break">break</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(цикл)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_break
+	};;
+*);;

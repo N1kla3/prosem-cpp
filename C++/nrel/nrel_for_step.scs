@@ -1,0 +1,36 @@
+sc_node_norole_relation -> nrel_for_step;;
+
+nrel_for_step
+=> nrel_main_idtf:
+		[c++ step in for]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ шаг в цикле for]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : for_operator;
+=> nrel_second_domain : concept_function;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_for_step;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Определяет <b><sc_element sys_idtf="concept_function">действие</b> выполняемое на каждом шаге цикла <b><sc_element sys_idtf="for_operator">for</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (шаг в цикле for)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_function;
+		for_operator	
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_for_step;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Можно перейти к следующему шагу с помощью операции <b><sc_element sys_idtf="concept_continue">continue</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(шаг в цикле for)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_continue
+	};;
+*);;
