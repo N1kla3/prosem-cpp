@@ -1,0 +1,37 @@
+sc_node_norole_relation -> call_function;;
+
+call_function
+=> nrel_main_idtf:
+		[c++ function call]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ вызов функции]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_second_domain : concept_value;
+=> nrel_first_domain : concept_function;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : call_function;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Вызов функции – это выражение, <b><sc_element sys_idtf="concept_value">значением</b> которого является <b><sc_element sys_idtf="return_value">значение, возвращаемое функцией</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (вызов функции)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_value;
+		return_value
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : call_function;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Вызов функции не всегда <b><sc_element sys_idtf="return_value">возвращает</b>  какое-то <b><sc_element sys_idtf="concept_value">значение</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(вызов функции)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_value;
+		return_value
+	};;
+*);;

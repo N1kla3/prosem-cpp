@@ -112,7 +112,7 @@ concept_namespace -> my
 			(*
 				<- concept_constructor;;
 				=> nrel_access_modificator:concept_public;;
-				=>concept_function_body:...
+				=>function_body:...
 				(*
 					<-concept_codeblock;;
 					=>rrel_call_inherit_constructor:c_Fruit;;
@@ -125,7 +125,7 @@ concept_namespace -> my
 				=> nrel_modificator:concept_const;;
 				=> nrel_access_modificator:concept_protected;;
 				=>nrel_return_type:concept_int;;
-				=>concept_function_body:...
+				=>function_body:...
 				(*
 					<- concept_codeblock;;
 					->rrel_1:...(*=> return_value:...(*<=nrel_type_casting:appleValue;;
@@ -136,7 +136,7 @@ concept_namespace -> my
 			(*
 				=>overrided_body:Apple_getInfo(*<- concept_codeblock;;
 					=> nrel_access_modificator:concept_public;;
-					->rrel_1:...(*=>nrel_call_function:cout(*=>call_function:...(*<- operator_left_shift;;
+					->rrel_1:...(*=>call_function:cout(*=>call_function:...(*<- operator_left_shift;;
 							=>nrel_argument:...(*->rrel_1:[Apple];;->rrel_2:cout;;*);;*);;*);;*);;*);;
 			*);;
 		*);;
@@ -329,7 +329,7 @@ concept_namespace -> my
 						->rrel_2:...(*=> if_operator:...
 						(*
 							=>nrel_statement:..var(*=>less_then:[10];;*);;
-							->if_body:...
+							=>if_body:...
 							(*<- concept_codeblock;;
 								->rrel_1:..var(*=>nrel_assignment:...(*<= call_function:...
 									(*<-operator_decrement;;
@@ -352,7 +352,7 @@ concept_namespace -> my
 						*);;*);;*);;
 					*);;
 				*);;
-				->rrel_3:...(*=>return_value:...(*<= nrel_value:..var;;*);;*);;	*);;
+				->rrel_3:...(*=>return_value:..var;;*);;	*);;
 			*);;
 			*);;
 		*);;

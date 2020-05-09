@@ -1,0 +1,37 @@
+sc_node_norole_relation -> return_value;;
+
+return_value
+=> nrel_main_idtf:
+		[c++ return_value]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ возвратить значение]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : concept_codeblock;
+=> nrel_second_domain : concept_value;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : return_value;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Возвращает значение из функции, <b><sc_element sys_idtf="concept_value">значение</b> должно быть того же <b><sc_element sys_idtf="nrel_datatype">типа</b> , что и в определении <b><sc_element sys_idtf="concept_function">функции</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (возвратить значение)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_function;
+		concept_value;
+		nrel_datatype
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : return_value;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Возвращение значения завершает выполнение <b><sc_element sys_idtf="concept_function">функции</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(возвратить значение)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_function
+	};;
+*);;

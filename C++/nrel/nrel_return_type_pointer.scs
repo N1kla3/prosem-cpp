@@ -1,0 +1,40 @@
+sc_node_norole_relation -> nrel_return_type_pointer;;
+
+nrel_return_type_pointer
+=> nrel_main_idtf:
+		[c++ return type by pointer]
+	    (* <- lang_en;; *);
+	=> nrel_main_idtf:
+	    [с++ тип возращаемого значения по указателю]
+	    (* <- lang_ru;; *);
+
+<- arity : binary_relation;
+=> nrel_first_domain : concept_function;
+=> nrel_second_domain : concept_type;;
+
+definition ->...
+(*
+	-> rrel_key_sc_element : nrel_return_type_pointer;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Определяет <b><sc_element sys_idtf="concept_type">тип</b> <b><sc_element sys_idtf="concept_pointer">указателя</b>, который вернет <b><sc_element sys_idtf="concept_function">функция</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Определение (тип возращаемого значения по указателю)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_type;
+		concept_pointer;
+		concept_function	
+	};;
+*);;
+
+statement ->...
+(*
+	-> rrel_key_sc_element : nrel_return_type_pointer;;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="concept_function">Функция</b> также может возвращать <b><sc_element sys_idtf="concept_reference">ссылки</b> или <b><sc_element sys_idtf="concept_value">значения</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	=> nrel_main_idtf: [Утверждение(тип возращаемого значения по указателю)](*<- lang_ru;;*);;
+	=> nrel_using_constants:
+	{
+		concept_function;
+		concept_reference;
+		concept_value
+	};;
+*);;
+
