@@ -1,11 +1,12 @@
 sc_node_norole_relation -> nrel_field;;
 
 nrel_field
+<- oop;
 => nrel_main_idtf:
-		[c++ class field]
+		[class field]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ поле класса]
+	    [поле класса]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

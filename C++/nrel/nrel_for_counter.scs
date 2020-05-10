@@ -1,11 +1,12 @@
 sc_node_norole_relation -> nrel_for_counter;;
 
 nrel_for_counter
+<- structural_programming;
 => nrel_main_idtf:
-		[c++ counter in for]
+		[counter in for]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ счетчик в цикле for]
+	    [счетчик в цикле for]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

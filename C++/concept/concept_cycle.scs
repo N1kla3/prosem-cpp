@@ -1,11 +1,12 @@
 sc_node_not_relation -> concept_cycle;;
 
 concept_cycle
+<-structural_programming;
 => nrel_main_idtf:
-		[c++ cycle]
+		[cycle]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ цикл]
+	    [цикл]
 	    (* <- lang_ru;; *);;
 
 definition ->...

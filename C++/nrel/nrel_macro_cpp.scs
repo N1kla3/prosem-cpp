@@ -2,11 +2,12 @@ sc_node_norole_relation -> nrel_macro_cpp;;
 sc_node_not_relation -> concept_code_block;;
 
 nrel_macro_cpp
+<- c_plus_plus;
 => nrel_main_idtf:
-		[c++ macro]
+		[macro]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ макрос]
+	    [макрос]
 	    (* <- lang_ru;; *);
 
 => nrel_second_domain: concept_code_block;

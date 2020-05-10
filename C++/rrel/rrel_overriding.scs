@@ -1,11 +1,12 @@
 sc_node_role_relation -> rrel_overriding;;
 
 rrel_overriding
+<- oop;
 => nrel_main_idtf:
-		[c++ override]
+		[override]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ переопределение]
+	    [переопределение]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

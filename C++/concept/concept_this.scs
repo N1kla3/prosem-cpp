@@ -2,11 +2,12 @@ sc_node_not_relation -> concept_this;;
 
 
 concept_this
+<- c_plus_plus;
 	=> nrel_main_idtf:
-		[c++ this]
+		[this]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ this]
+	    [this]
 	    (* <- lang_ru;; *);
 <=inclusion:concept_pointer;;
 

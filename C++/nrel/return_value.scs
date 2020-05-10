@@ -1,11 +1,12 @@
 sc_node_norole_relation -> return_value;;
 
 return_value
+<- structural_programming;
 => nrel_main_idtf:
-		[c++ return_value]
+		[return_value]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ возвратить значение]
+	    [возвратить значение]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

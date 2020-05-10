@@ -1,11 +1,12 @@
 sc_node_norole_relation -> nrel_dereferencing_cpp;;
 
 nrel_dereferencing_cpp
+<- c_plus_plus;
 => nrel_main_idtf:
-		[c++ dereferencing(*)]
+		[dereferencing(*)]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ разыменование указателя(*)]
+	    [разыменование указателя(*)]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

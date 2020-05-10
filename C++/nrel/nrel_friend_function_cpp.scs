@@ -4,12 +4,12 @@ sc_node_role_relation -> concept_access_mod_private;;
 sc_node_role_relation -> concept_access_mod_protected;;
 
 nrel_friend_function_cpp
-
+<- c_plus_plus;
 => nrel_main_idtf:
-		[c++ friend function]
+		[friend function]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ дружественная функция]
+	    [дружественная функция]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

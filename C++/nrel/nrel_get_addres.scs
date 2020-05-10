@@ -1,11 +1,12 @@
 sc_node_not_relation -> concept_addres;;
 
 nrel_get_addres
+<- c_plus_plus;
 => nrel_main_idtf:
-		[c++ get addres(&)]
+		[get addres(&)]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ операция взятия аддреса(&)]
+	    [операция взятия аддреса(&)]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

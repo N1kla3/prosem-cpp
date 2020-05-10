@@ -1,11 +1,12 @@
 sc_node_norole_relation -> nrel_inherit;;
 
 nrel_inherit
+<- oop;
 => nrel_main_idtf:
-		[c++ inheritance]
+		[inheritance]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ наследование]
+	    [наследование]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

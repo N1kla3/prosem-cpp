@@ -1,11 +1,12 @@
 sc_node_not_relation -> concept_enum;;
 
 concept_enum
+<- oop;
 => nrel_main_idtf:
-		[c++ enum]
+		[enum]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ перечисление]
+	    [перечисление]
 	    (* <- lang_ru;; *);;
 
 definition ->...

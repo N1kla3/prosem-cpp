@@ -3,12 +3,12 @@ sc_node_not_relation -> concept_template;;
 concept_template
 
 => nrel_inclusion : {concept_template_class_cpp;concept_function_template_cpp};
-
+<- c_plus_plus;
 => nrel_main_idtf:
-		[c++ template]
+		[template]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ шаблон]
+	    [шаблон]
 	    (* <- lang_ru;; *);;
 
 definition ->...

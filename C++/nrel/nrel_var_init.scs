@@ -1,11 +1,12 @@
 sc_node_norole_relation -> nrel_assignment;;
 
 nrel_var_init
+<- structural_programming;
 => nrel_main_idtf:
-		[c++ variable initilization]
+		[variable initilization]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ инициализация переменной]
+	    [инициализация переменной]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

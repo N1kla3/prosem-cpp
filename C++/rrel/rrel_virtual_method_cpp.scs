@@ -5,12 +5,12 @@ sc_node_norole_relation -> nrel_derieved_class;;
 
 
 rrel_virtual_method_cpp
-
+<- c_plus_plus;
 => nrel_main_idtf:
-		[c++ virtual method]
+		[virtual method]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ виртуальная функция]
+	    [виртуальная функция]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

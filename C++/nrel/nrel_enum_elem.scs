@@ -1,11 +1,12 @@
 sc_node_norole_relation -> nrel_enum_elem;;
 
 nrel_enum_elem
+<- oop;
 => nrel_main_idtf:
-		[c++ enum elem]
+		[enum elem]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ перечислитель]
+	    [перечислитель]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

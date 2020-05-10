@@ -1,11 +1,12 @@
 sc_node_norole_relation -> overrided_body;;
 
 overrided_body
+<- oop;
 => nrel_main_idtf:
-		[c++ overrided body]
+		[overrided body]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ переопределенное тело]
+	    [переопределенное тело]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

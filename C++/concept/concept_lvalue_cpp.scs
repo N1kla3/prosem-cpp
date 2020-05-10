@@ -4,11 +4,12 @@ sc_node_norole_relation -> concept_const;;
 
 
 concept_lvalue_cpp
+<- c_plus_plus;
 => nrel_main_idtf:
-		[c++ lvalue]
+		[lvalue]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ lvalue]
+	    [lvalue]
 	    (* <- lang_ru;; *);
 
 <= nrel_inclusion : concept_expression;;

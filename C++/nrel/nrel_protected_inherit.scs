@@ -1,11 +1,12 @@
 sc_node_norole_relation -> nrel_protected_inherit;;
 
 nrel_protected_inherit
+<- oop;
 => nrel_main_idtf:
-		[c++ protected inheritance]
+		[protected inheritance]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ защищенное наследование]
+	    [защищенное наследование]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

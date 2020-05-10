@@ -1,12 +1,13 @@
 sc_node_not_relation -> concept_default;;
 
 concept_default
+<- c_plus_plus;
 <= nrel_inclusion:concept_keyword;
 => nrel_main_idtf:
-		[c++ default]
+		[default]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ дефолт]
+	    [дефолт]
 	    (* <- lang_ru;; *);;
 
 definition ->...

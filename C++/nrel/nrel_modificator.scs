@@ -1,11 +1,12 @@
 sc_node_norole_relation -> nrel_modificator;;
 
 nrel_modificator
+<- oop;
 => nrel_main_idtf:
-		[c++ modificator]
+		[modificator]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ модификатор]
+	    [модификатор]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

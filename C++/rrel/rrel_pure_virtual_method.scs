@@ -1,11 +1,12 @@
 sc_node_role_relation -> rrel_pure_virtual_method;;
 
 rrel_pure_virtual_method
+<- c_plus_plus;
 => nrel_main_idtf:
-		[c++ pure virtual method]
+		[pure virtual method]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ чисто виртуальная функция]
+	    [чисто виртуальная функция]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

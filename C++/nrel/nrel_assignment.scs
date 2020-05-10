@@ -1,11 +1,12 @@
 sc_node_norole_relation -> nrel_assignment;;
 
 nrel_assignment
+<- structural_programming;
 => nrel_main_idtf:
-		[c++ operator of assignment]
+		[operator of assignment]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ оператор присваивания]
+	    [оператор присваивания]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

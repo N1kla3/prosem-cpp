@@ -1,6 +1,7 @@
 sc_node_not_relation -> for_operator;;
 
 for_operator
+<- structural_programming;
 <= inclusion:concept_cycle;
 	=> nrel_main_idtf:
 		[cycle for]

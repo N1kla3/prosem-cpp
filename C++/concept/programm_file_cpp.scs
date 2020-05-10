@@ -2,11 +2,12 @@ sc_node_not_relation -> programm_file_cpp;;
 sc_node_not_relation -> concept_project_cpp;;
 
 programm_file_cpp
+<- c_plus_plus;
 => nrel_main_idtf:
-		[c++ cpp file]
+		[cpp file]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ cpp файл]
+	    [cpp файл]
 	    (* <- lang_ru;; *);
 <=nrel_inclusion:concept_file;;
 

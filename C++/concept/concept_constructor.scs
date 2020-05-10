@@ -1,11 +1,12 @@
 sc_node_not_relation -> concept_constructor;;
 
 concept_constructor
+<-oop;
 => nrel_main_idtf:
-		[c++ class constructor]
+		[class constructor]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ конструктор класса]
+	    [конструктор класса]
 	    (* <- lang_ru;; *);
 <= nrel_inclusion:concept_function;;
 

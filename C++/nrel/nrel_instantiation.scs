@@ -1,11 +1,12 @@
 sc_node_norole_relation -> nrel_instantiation;;
 
 nrel_instantiation
+<- oop;
 => nrel_main_idtf:
-		[c++ instantiation]
+		[instantiation]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ конкретизация]
+	    [конкретизация]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

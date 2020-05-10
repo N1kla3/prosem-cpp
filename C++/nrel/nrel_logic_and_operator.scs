@@ -5,11 +5,12 @@ sc_node_not_relation -> concept_boolean;;
 sc_node_norole_relation -> nrel_parametr;;
 
 nrel_logic_and_operator
+<- structural_programming;
 => nrel_main_idtf:
-		[c++ logic AND (&&)]
+		[logic AND (&&)]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [с++ логическое И(&&)]
+	    [логическое И(&&)]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;
