@@ -14,7 +14,7 @@ mainCpp=>nrel_include_cpp:{iostream;vector;algorithm};;
 //namespace my {
 
 concept_namespace -> my
-(* <= nrel_inclusion : mainCpp;;
+(* 	<- mainCpp;;
 	=> nrel_list_of_operators : ..my_list_operators
 	(*
 		<- sc_node_not_relation;;
@@ -65,23 +65,23 @@ concept_namespace -> my
 			<- concept_class;;
 			->c_Fruit(*<- concept_constructor;;=> nrel_modificator:
 				concept_default;;
-				=> nrel_access_modificator:concept_public;;*);;
-			=> rrel_virtual_method:justVirtual
+				=> nrel_access_modificator:concept_access_modifier_public;;*);;
+			=> rrel_virtual_method_cpp:justVirtual
 			(*
 				<-concept_function;;
 				=> nrel_modificator:concept_noexcept;;
-				=> nrel_access_modificator:concept_public;;
+				=> nrel_access_modificator:concept_access_modifier_public;;
 				=>nrel_return_type:concept_int;;
-				=>function_body:...
+				=>nrel_function_body:...
 				(*
-					<- concept_codeblock;;
+					<- concept_code_block;;
 					->rrel_1:...(*=> return_value:[5];;*);;
 				*);;
 			*);;
 			=> rrel_pure_virtual_method:getInfo
 			(*
 				<-concept_function;;
-				=> nrel_access_modificator:concept_public;;
+				=> nrel_access_modificator:concept_access_modifier_public;;
 				=>nrel_return_type:concept_void;;
 			*);;
 		*);;
@@ -107,35 +107,35 @@ concept_namespace -> my
 			<- concept_class;;
 			=> nrel_protected_inherit:Fruit;;
 			=> nrel_field:appleValue(*=>nrel_datatype:concept_float;;
-					=>nrel_access_modificator:concept_public;;*);;
+					=>nrel_access_modificator:concept_access_modifier_public;;*);;
 			->c_Apple
 			(*
 				<- concept_constructor;;
-				=> nrel_access_modificator:concept_public;;
-				=>function_body:...
+				=> nrel_access_modificator:concept_access_modifier_public;;
+				=>nrel_function_body:...
 				(*
-					<-concept_codeblock;;
+					<-concept_code_block;;
 					=>rrel_call_inherit_constructor:c_Fruit;;
 					->rrel_1:appleValue(*=> nrel_assign:3.5f;;*);;
 				*);;
 			*);;
-			=> rrel_method:getAppleValue
+			=> nrel_method:getAppleValue
 			(*
 				<-concept_function;;
 				=> nrel_modificator:concept_const;;
-				=> nrel_access_modificator:concept_protected;;
+				=> nrel_access_modificator:concept_access_modifier_protected;;
 				=>nrel_return_type:concept_int;;
-				=>function_body:...
+				=>nrel_function_body:...
 				(*
-					<- concept_codeblock;;
+					<- concept_code_block;;
 					->rrel_1:...(*=> return_value:...(*<=nrel_type_casting:appleValue;;
 							<=nrel_datatype:concept_int;;*);;*);;
 				*);;
 			*);;
 			=> rrel_overriding:getInfo
 			(*
-				=>overrided_body:Apple_getInfo(*<- concept_codeblock;;
-					=> nrel_access_modificator:concept_public;;
+				=>overrided_body:Apple_getInfo(*<- concept_code_block;;
+					=> nrel_access_modificator:concept_access_modifier_public;;
 					->rrel_1:...(*=>call_function:cout(*=>call_function:...(*<- operator_left_shift;;
 							=>nrel_argument:...(*->rrel_1:[Apple];;->rrel_2:cout;;*);;*);;*);;*);;*);;
 			*);;
@@ -166,32 +166,32 @@ concept_namespace -> my
 			<- concept_class;;
 			=> nrel_inherit:Fruit;;
 			=> nrel_field:orangeField(*=>nrel_datatype:concept_int;;
-					=>nrel_access_modificator:concept_private;;*);;
+					=>nrel_access_modificator:concept_access_modifier_private;;*);;
 			->c_Orange
 			(*
 				<- concept_constructor;;
-				=> nrel_access_modificator:concept_protected;;
-				<-...(*<-concept_function_body;;
+				=> nrel_access_modificator:concept_access_modifier_protected;;
+				<-...(*<-nrel_function_body;;
 				=>rrel_call_inherit_constructor:c_Fruit;;
 				->orangeField(*=> nrel_assign:[6];;*);;*);;
 			*);;
-			=> rrel_method:OrangeFunc
+			=> nrel_method:OrangeFunc
 			(*
 				<-concept_function;;
 				=> nrel_parametr: ...(*->rrel_1:num(*<- concept_variable;; => nrel_datatype: concept_int;;*);;*);;
 				=> nrel_modificator:concept_const;;
 				=>nrel_access_modificator:concept_protected;;
 				=>nrel_return_type:concept_int;;
-				=>function_body:...
+				=>nrel_function_body:...
 				(*
-					<- concept_codeblock;;
+					<- concept_code_block;;
 					->rrel_1:...(*=> return_value:...(*<= call_function:...(*<- operator_multi;;
 						=>nrel_argument:...(*->rrel_1:num;;->rrel_2:orangeField;;*);;*);;*);;*);;
 				*);;
 			*);;
 			=> rrel_overriding:getInfo
 			(*
-				=>overrided_body:Orange_getInfo(*<-concept_codeblock;;
+				=>overrided_body:Orange_getInfo(*<-concept_code_block;;
 				=> nrel_access_modificator:concept_public;;
 				->rrel_1:...(*=>call_function:...(*<- operator_left_shift;;
 					=>nrel_argument:...(*->rrel_1:[Orange];;->rrel_2:cout;;*);;*);;*);;*);;
@@ -226,37 +226,37 @@ concept_namespace -> my
 			<- concept_class;;
 			=> nrel_virtual_inherit:{Apple; Orange};;
 			=> nrel_field:var(*=>nrel_datatype:concept_int;;
-					=>nrel_access_modificator:concept_private;;*);;
+					=>nrel_access_modificator:concept_access_modifier_private;;*);;
 			->c_Mutant
 			(*
 				<- concept_constructor;;
 				=> concept_parametr:...(*->rrel_1:..var(*<- concept_reference;;=> nrel_modificator:concept_const;;*);;*);;
 				=> nrel_modificator:concept_explicit;;
-				=> nrel_access_modificator:concept_private;;
-				<-concept_function_body:...
+				=> nrel_access_modificator:concept_access_modifier_private;;
+				<-nrel_function_body:...
 				(*
-					<-concept_codeblock;;
+					<-concept_code_block;;
 					=>rrel_call_inherit_constructor:{c_Orange; c_Apple};;
 					->rrel_1:...(*->Mutant_this(*<- concept_this;;=> call_field: var(*=> nrel_assign:..var;;*);;*);;*);;
 				*);;
 			*);;
-			->getSmth
+			=> nrel_method:getSmth
 			(*
 				<- concept_function_template;;=>nrel_template_parametr:T;;
 				=>nrel_parametr:...(*->rrel_1:obj(*<-concept_reference;;*);;*);;
-				=> nrel_access_modificator:concept_private;;
+				=> nrel_access_modificator:concept_access_modifier_private;;
 				=> nrel_pointer_return_type:T;;
-				=>function_body:...(*=>return_value:obj;;*);;
+				=>nrel_function_body:...(*=>return_value:obj;;*);;
 			*);;
-			=> rrel_method:getBoth
+			=> nrel_method:getBoth
 			(*
 				<-concept_function;;
 				=> nrel_modificator:{concept_const;concept_inline};;
-				=> nrel_access_modificator:concept_private;;
+				=> nrel_access_modificator:concept_access_modifier_private;;
 				=>nrel_return_type:concept_int;;
-				=>function_body:...
+				=>nrel_function_body:...
 				(*
-					<- concept_codeblock;;
+					<- concept_code_block;;
 					-> rrel_1:..a(*<- concept_variable;; => nrel_datatype:concept_int;;
 						=> nrel_assignment:...(*<=call_function:...
 						(*<-OrangeFunc(*=>nrel_argument:...(*->rrel_1:[3];;*);;*);;*);;*);;*);;
@@ -269,8 +269,8 @@ concept_namespace -> my
 			*);;
 			=> rrel_overriding:getInfo
 			(*
-				<=overrided_body:...(*<- concept_codeblock;;
-				=> nrel_access_modificator:concept_private;;
+				<=overrided_body:...(*<- concept_code_block;;
+				=> nrel_access_modificator:concept_access_modifier_private;;
 				->rrel_1:...(*=>call_function:...(*<- operator_left_shift;;=>nrel_argument:{[Mutant];cout};;*);;*);;*);;
 			*);;
 		*);;
@@ -311,7 +311,7 @@ concept_namespace -> my
 				*);;
 			=> function_body:...
 			(*
-				<- concept_codeblock;;
+				<- concept_code_block;;
 				->rrel_1:..var
 				(*=> nrel_datatype: concept_int;;<- concept_variable;;=> nrel_assignment:num(*<= concept_variable;;*);;*);;
 				->rrel_2:...
@@ -323,14 +323,14 @@ concept_namespace -> my
 					=> nrel_cycle_border:...(*<= nrel_call_function:less_then(*=>argument:{i;[10]};;*);;*);;
 					=>cycle_body:...
 					(*
-						<- concept_codeblock;;
+						<- concept_code_block;;
 						->rrel_1:..var(*=>nrel_assignment:...(*<= call_function:...(*<-operator_increment;;
 							=>nrel_argument:...(*->rrel_1:..var;;*);;*);;*);;*);;
 						->rrel_2:...(*=> if_operator:...
 						(*
 							=>nrel_statement:..var(*=>less_then:[10];;*);;
 							=>if_body:...
-							(*<- concept_codeblock;;
+							(*<- concept_code_block;;
 								->rrel_1:..var(*=>nrel_assignment:...(*<= call_function:...
 									(*<-operator_decrement;;
 									=>nrel_argument:...(*->rrel_1:..var;;*);;*);;*);;*);;
@@ -339,11 +339,11 @@ concept_namespace -> my
 								->rrel_1:...(*=> if_operator:...(*
 								=>nrel_statement:..var(*=>equals:[10];;*);;
 								=>if_body:...
-								(*<- concept_codeblock;;
+								(*<- concept_code_block;;
 									->rrel_1:...(*=>nrel_throw:myException;;*);;
 								*);;
 								=>nrel_else_operator:...
-								(*<-concept_codeblock;;
+								(*<-concept_code_block;;
 									->rrel_1:..var(*=>nrel_assignment:...(*<= call_function:...
 									(*<-operator_increment;;
 									=>nrel_argument:...(*->rrel_1:..var;;*);;*);;*);;*);;
@@ -358,5 +358,3 @@ concept_namespace -> my
 		*);;
 	*);;
 *);;
-
-
