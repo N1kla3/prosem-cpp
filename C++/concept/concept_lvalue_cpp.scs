@@ -4,7 +4,6 @@ sc_node_norole_relation -> concept_const;;
 
 
 concept_lvalue_cpp
-<- c_plus_plus;
 => nrel_main_idtf:
 		[lvalue]
 	    (* <- lang_en;; *);

@@ -2,7 +2,6 @@ sc_node_not_relation -> programm_file_cpp;;
 sc_node_not_relation -> concept_project_cpp;;
 
 programm_file_cpp
-<- c_plus_plus;
 => nrel_main_idtf:
 		[cpp file]
 	    (* <- lang_en;; *);

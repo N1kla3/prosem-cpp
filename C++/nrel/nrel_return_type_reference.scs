@@ -1,12 +1,11 @@
 sc_node_norole_relation -> nrel_return_type_reference;;
 
 nrel_return_type_reference
-<- c_plus_plus;
 => nrel_main_idtf:
-		[return type by reference]
+		[return type by reference*]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [тип возращаемого значения по ссылке]
+	    [тип возращаемого значения по ссылке*]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

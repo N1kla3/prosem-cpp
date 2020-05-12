@@ -2,12 +2,11 @@ sc_node_norole_relation -> nrel_include_cpp;;
 sc_node_not_relation -> concept_directive;;
 
 nrel_include_cpp
-<- c_plus_plus;
 => nrel_main_idtf:
-		[ directive include]
+		[ directive include*]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [директива include]
+	    [директива include*]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

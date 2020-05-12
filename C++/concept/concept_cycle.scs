@@ -1,7 +1,6 @@
 sc_node_not_relation -> concept_cycle;;
 
 concept_cycle
-<-structural_programming;
 => nrel_main_idtf:
 		[cycle]
 	    (* <- lang_en;; *);

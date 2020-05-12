@@ -2,12 +2,11 @@ sc_node_norole_relation -> nrel_macro_cpp;;
 sc_node_not_relation -> concept_code_block;;
 
 nrel_macro_cpp
-<- c_plus_plus;
 => nrel_main_idtf:
-		[macro]
+		[macro*]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [макрос]
+	    [макрос*]
 	    (* <- lang_ru;; *);
 
 => nrel_second_domain: concept_code_block;
@@ -21,14 +20,15 @@ definition ->...
 	=> nrel_main_idtf: [Определение (макрос)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{
-		concept_codeb_lock
+		concept_code_block
 	};;
 *);;
 
 statement ->...
 (*
 	-> rrel_key_sc_element : nrel_macro_cpp;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[Макрос быстрее чем <b><sc_element sys_idtf="concept_function">функция</b>.](*<-lang_ru;;*);;=> nrel_format: format_html;;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Макрос быстрее чем <b><sc_element sys_idtf="concept_function">функция</b>.]
+(*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Утверждение(макрос)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{

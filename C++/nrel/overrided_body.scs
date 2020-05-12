@@ -1,12 +1,11 @@
 sc_node_norole_relation -> overrided_body;;
 
 overrided_body
-<- oop;
 => nrel_main_idtf:
-		[overrided body]
+		[overrided body*]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [переопределенное тело]
+	    [переопределенное тело*]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;
@@ -16,11 +15,11 @@ overrided_body
 definition ->...
 (*
 	-> rrel_key_sc_element : overrided_body;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="conceptio_function_body">Тело</b> <b><sc_element sys_idtf="rrel_overriding">переопределенной функции</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[<b><sc_element sys_idtf="nrel_function_body">Тело</b> <b><sc_element sys_idtf="rrel_overriding">переопределенной функции</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Определение (переопределенное тело)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{
-		concept_function_body;
+		nrel_function_body;
 		rrel_overriding	
 	};;
 *);;

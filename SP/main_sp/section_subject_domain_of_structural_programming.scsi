@@ -6,5 +6,17 @@ subject_domain_of_structural_programming
 -> rrel_maximum_studied_object_class: structural_programming;
 
 -> rrel_not_maximum_studied_object_class:
+		concept_cycle;
+		for_operator;
+		call_function;
+		nrel_assignment;
+		nrel_cycle_border;
+		nrel_enum_elem;
+		nrel_for_counter;
+		nrel_for_step;
+		nrel_return_type;
+		nrel_var_declaration;
+		nrel_var_init;
+		return_value;
 		concept_compiler;;
 

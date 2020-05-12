@@ -4,7 +4,6 @@ sc_node_role_relation -> rrel_field;;
 sc_node_role_relation -> rrel_method;;
 
 concept_structure_cpp
-<- c_plus_plus;
 <= nrel_inclusion:concept_class;
 => nrel_main_idtf:
 		[struct]

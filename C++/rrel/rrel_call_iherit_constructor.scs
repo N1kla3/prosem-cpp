@@ -1,12 +1,11 @@
 sc_node_role_relation -> rrel_call_inherit_constructor;;
 
 rrel_call_inherit_constructor
-<- c_plus_plus;
 => nrel_main_idtf:
-		[call base constructor]
+		[call base constructor']
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [вызов базового конструктора]
+	    [вызов базового конструктора']
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

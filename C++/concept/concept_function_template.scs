@@ -1,14 +1,10 @@
 sc_node_not_relation -> concept_function_template_cpp;;
 sc_node_not_relation -> concept_function;;
 sc_node_not_relation -> concept_object;;
-sc_node_role_relation -> rrel_template_argument_cpp;;
-sc_node_role_relation -> rrel_options_template_argument_cpp;;
 
 concept_function_template_cpp
 
 <= nrel_inclusion : concept_function;
-<- c_plus_plus;
-
 => nrel_main_idtf:
 		[function template]
 	    (* <- lang_en;; *);
@@ -31,11 +27,11 @@ definition ->...
 statement ->...
 (*
 	-> rrel_key_sc_element : concept_function_template_cpp;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[Любая шаблонная функция предполагает наличие определенных <b><sc_element sys_idtf="rrel_options_template_argument_cpp">свойств</b> <b><sc_element sys_idtf="rrel_template_argument_cpp">параметризованного 														типа</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Любая шаблонная функция предполагает наличие определенных <b><sc_element sys_idtf="nrel_instantiation_of_template">свойств</b> <b><sc_element sys_idtf="nrel_template_parametr">параметризованного 														типа</b>.](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Утверждение(шаблонная функция)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{
-		rrel_template_argument_cpp;
-		rrel_options_template_argument_cpp
+		nrel_template_parametr;
+		nrel_instantiation_of_template
 	};;
 *);;

@@ -5,12 +5,11 @@ sc_node_norole_relation -> nrel_derieved_class;;
 
 
 rrel_virtual_method_cpp
-<- c_plus_plus;
 => nrel_main_idtf:
-		[virtual method]
+		[virtual method']
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [виртуальная функция]
+	    [виртуальная функция']
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;
@@ -34,12 +33,12 @@ definition ->...
 statement ->...
 (*
 	-> rrel_key_sc_element : rrel_virtual_method_cpp;;
-	<= nrel_sc_text_translation: ...(*->rrel_example:[Определение того, какой экземпляр виртуальной функции вызывается по выражению <b><sc_element sys_idtf="nrel_call_function">вызова функции</b>, зависит от <b><sc_element sys_idtf="concept_class">класса</b> объекта, адресуемого <b><sc_element sys_idtf="concept_pointer">указателем</b> или <b><sc_element sys_idtf="concept_reference">ссылкой</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
+	<= nrel_sc_text_translation: ...(*->rrel_example:[Определение того, какой экземпляр виртуальной функции вызывается по выражению <b><sc_element sys_idtf="call_function">вызова функции</b>, зависит от <b><sc_element sys_idtf="concept_class">класса</b> объекта, адресуемого <b><sc_element sys_idtf="concept_pointer">указателем</b> или <b><sc_element sys_idtf="concept_reference">ссылкой</b>](*<-lang_ru;;=> nrel_format: format_html;;*);;*);;
 	=> nrel_main_idtf: [Утверждение(виртуальная функция)](*<- lang_ru;;*);;
 	=> nrel_using_constants:
 	{
 		rrel_virtual_method_cpp;
-		nrel_call_function;
+		call_function;
 		concept_class;
 		concept_pointer;
 		concept_reference

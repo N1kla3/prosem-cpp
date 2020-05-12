@@ -5,7 +5,6 @@ sc_node_not_relation -> concept_data;;
 sc_node_not_relation -> concept_reference;;
 
 concept_pointer
-<- c_plus_plus;
 	=> nrel_main_idtf:
 		[pointer]
 	    (* <- lang_en;; *);

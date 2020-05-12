@@ -1,12 +1,11 @@
 sc_node_norole_relation -> nrel_cycle_border;;
 
 nrel_cycle_border
-<- structural_programming;
 => nrel_main_idtf:
-		[cycle statement]
+		[cycle statement*]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [условие цикла]
+	    [условие цикла*]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

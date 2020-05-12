@@ -6,5 +6,16 @@ subject_domain_of_oop
 -> rrel_maximum_studied_object_class: oop;
 
 -> rrel_not_maximum_studied_object_class:
+		concept_constructor;
+		concept_enum;
+		concept_this;
+		nrel_field;
+		nrel_explicit_casting;
+		nrel_inherit;
+		nrel_instantiation;
+		nrel_modificator;
+		nrel_protected_inherit;
+		overrided_body;
+		rrel_overriding;
 		concept_compiler;;
 

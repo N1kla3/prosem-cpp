@@ -3,10 +3,10 @@ sc_node_norole_relation -> nrel_for_step;;
 nrel_for_step
 <- structural_programming;
 => nrel_main_idtf:
-		[step in for]
+		[step in for*]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [шаг в цикле for]
+	    [шаг в цикле for*]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

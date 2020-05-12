@@ -1,16 +1,15 @@
 sc_node_norole_relation -> return_value;;
 
 return_value
-<- structural_programming;
 => nrel_main_idtf:
-		[return_value]
+		[return_value*]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [возвратить значение]
+	    [возвратить значение*]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;
-=> nrel_first_domain : concept_codeblock;
+=> nrel_first_domain : concept_code_block;
 => nrel_second_domain : concept_value;;
 
 definition ->...

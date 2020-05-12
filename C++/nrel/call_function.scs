@@ -1,12 +1,11 @@
 sc_node_norole_relation -> call_function;;
 
 call_function
-<- structural_programming;
 => nrel_main_idtf:
-		[function call]
+		[function call*]
 	    (* <- lang_en;; *);
 	=> nrel_main_idtf:
-	    [вызов функции]
+	    [вызов функции*]
 	    (* <- lang_ru;; *);
 
 <- arity : binary_relation;

@@ -6,5 +6,28 @@ subject_domain_of_c_plus_plus_language
 -> rrel_maximum_studied_object_class: c_plus_plus;
 
 -> rrel_not_maximum_studied_object_class:
+		concept_default;
+		concept_function_template_cpp;
+		concept_lvalue_cpp;
+		concept_rvalue_cpp;
+		concept_structure_cpp;
+		concept_template;
+		concept_template_class_cpp;
+		concept_pointer;
+		programm_file_cpp;
+		nrel_dereferencing_cpp;
+		nrel_friend_function_cpp;
+		nrel_get_addres;
+		nrel_include_cpp;
+		nrel_instantiation_of_template;
+		nrel_macro_cpp;
+		nrel_return_type_pointer;
+		nrel_return_type_reference;
+		nrel_template_parametr;
+		nrel_using_namespace;
+		rrel_call_inherit_constructor;
+		rrel_func_arg_ref;
+		rrel_pure_virtual_method;
+		rrel_virtual_method_cpp;
 		concept_compiler;;
 

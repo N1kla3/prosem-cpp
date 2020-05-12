@@ -1,7 +1,6 @@
 sc_node_not_relation -> concept_enum;;
 
 concept_enum
-<- oop;
 => nrel_main_idtf:
 		[enum]
 	    (* <- lang_en;; *);
