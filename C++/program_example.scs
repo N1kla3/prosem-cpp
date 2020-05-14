@@ -15,7 +15,7 @@ mainCpp=>nrel_include_cpp:{iostream;vector;algorithm};;
 
 concept_namespace -> my
 (* 	<- mainCpp;;
-	=> nrel_list_of_operators : ..my_list_operators
+	=> nrel_list_of_operators : my_list_operators
 	(*
 		<- sc_node_not_relation;;
 
@@ -299,7 +299,7 @@ concept_namespace -> my
 			<- concept_template_class_cpp;;
 			=>nrel_template_parametr:T;;
 			<- myException(*<- concept_class;;<= nrel_public_inherit:exception
-			(*<=nrel_operator:std(*<-concept_namespace;;*);;*);;=>nrel_access_modificator:concept_public;;*);;
+			(*<=nrel_operator:std(*<-concept_namespace;;*);;*);;=>nrel_access_modificator:concept_access_modifier_public;;*);;
 			=> rrel_method:getVar
 			(*
 				=> nrel_modificator:{concept_static;concept_noexcept};;
