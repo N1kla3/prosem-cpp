@@ -66,7 +66,7 @@ concept_namespace -> my
 			->c_Fruit(*<- concept_constructor;;=> nrel_modificator:
 				concept_default;;
 				=> nrel_access_modificator:concept_access_modifier_public;;*);;
-			=> rrel_virtual_method_cpp:justVirtual
+			=> nrel_virtual_method_cpp:justVirtual
 			(*
 				<-concept_function;;
 				=> nrel_modificator:concept_noexcept;;
@@ -78,7 +78,7 @@ concept_namespace -> my
 					->rrel_1:...(*=> return_value:[5];;*);;
 				*);;
 			*);;
-			=> rrel_pure_virtual_method:getInfo
+			=> nrel_pure_virtual_method:getInfo
 			(*
 				<-concept_function;;
 				=> nrel_access_modificator:concept_access_modifier_public;;
@@ -115,7 +115,7 @@ concept_namespace -> my
 				=>nrel_function_body:...
 				(*
 					<-concept_code_block;;
-					=>rrel_call_inherit_constructor:c_Fruit;;
+					=>nrel_call_inherit_constructor:c_Fruit;;
 					->rrel_1:appleValue(*=> nrel_assign:3.5f;;*);;
 				*);;
 			*);;
@@ -132,7 +132,7 @@ concept_namespace -> my
 							<=nrel_datatype:concept_int;;*);;*);;
 				*);;
 			*);;
-			=> rrel_overriding:getInfo
+			=> nrel_overriding:getInfo
 			(*
 				=>overrided_body:Apple_getInfo(*<- concept_code_block;;
 					=> nrel_access_modificator:concept_access_modifier_public;;
@@ -172,7 +172,7 @@ concept_namespace -> my
 				<- concept_constructor;;
 				=> nrel_access_modificator:concept_access_modifier_protected;;
 				<-...(*<-nrel_function_body;;
-				=>rrel_call_inherit_constructor:c_Fruit;;
+				=>nrel_call_inherit_constructor:c_Fruit;;
 				->orangeField(*=> nrel_assign:[6];;*);;*);;
 			*);;
 			=> nrel_method:OrangeFunc
@@ -189,7 +189,7 @@ concept_namespace -> my
 						=>nrel_argument:...(*->rrel_1:num;;->rrel_2:orangeField;;*);;*);;*);;*);;
 				*);;
 			*);;
-			=> rrel_overriding:getInfo
+			=> nrel_overriding:getInfo
 			(*
 				=>overrided_body:Orange_getInfo(*<-concept_code_block;;
 				=> nrel_access_modificator:concept_public;;
@@ -236,7 +236,7 @@ concept_namespace -> my
 				<-nrel_function_body:...
 				(*
 					<-concept_code_block;;
-					=>rrel_call_inherit_constructor:{c_Orange; c_Apple};;
+					=>nrel_call_inherit_constructor:{c_Orange; c_Apple};;
 					->rrel_1:...(*->Mutant_this(*<- concept_this;;=> call_field: var(*=> nrel_assign:..var;;*);;*);;*);;
 				*);;
 			*);;
@@ -267,9 +267,9 @@ concept_namespace -> my
 						(*<- operator_plus;;=> nrel_argument:...(*->rrel_1:..a;;->rrel_2:..b;;*);;*);;*);;*);;
 				*);;
 			*);;
-			=> rrel_overriding:getInfo
+			=> nrel_overriding:getInfo
 			(*
-				<=overrided_body:...(*<- concept_code_block;;
+				=>overrided_body:...(*<- concept_code_block;;
 				=> nrel_access_modificator:concept_access_modifier_private;;
 				->rrel_1:...(*=>call_function:...(*<- operator_left_shift;;=>nrel_argument:{[Mutant];cout};;*);;*);;*);;
 			*);;
@@ -300,7 +300,7 @@ concept_namespace -> my
 			=>nrel_template_parametr:T;;
 			<- myException(*<- concept_class;;<= nrel_public_inherit:exception
 			(*<=nrel_operator:std(*<-concept_namespace;;*);;*);;=>nrel_access_modificator:concept_access_modifier_public;;*);;
-			=> rrel_method:getVar
+			=> nrel_method:getVar
 			(*
 				=> nrel_modificator:{concept_static;concept_noexcept};;
 				=> nrel_return_type:concept_int;;
@@ -309,7 +309,7 @@ concept_namespace -> my
 					->rrel_1:obj(*=>nrel_datatype:concept_int;;<- concept_variable;;*);;
 					->rrel_2:num(*<-concept_variable;;=>nrel_instantiation:T;;*);;
 				*);;
-			=> function_body:...
+			=> nrel_function_body:...
 			(*
 				<- concept_code_block;;
 				->rrel_1:..var
